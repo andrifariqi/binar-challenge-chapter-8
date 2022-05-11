@@ -1,0 +1,264 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "version": "1.0.0",
+    "title": "API Docs Binar Challenge Chapter 8"
+  },
+  "host": "localhost:5000",
+  "basePath": "/api",
+  "tags": [
+    {
+      "name": "players",
+      "description": "Everything about players",
+      "externalDocs": {
+        "description": "Find out more",
+        "url": "localhost:5000"
+      }
+    }
+  ],
+  "schemes": ["http"],
+  "paths": {
+    "/players": {
+      "post": {
+        "tags": ["players"],
+        "summary": "Add a new players",
+        "operationId": "addPlayers",
+        "consumes": ["application/json"],
+        "produces": ["application/json"],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "description": "Players object that needs to be added",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/Player"
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "SUCCESS"
+          },
+          "400": {
+            "description": "username or email or password field cannot be empty."
+          },
+          "500": {
+            "description": "Some error occurred while creating the Player."
+          }
+        }
+      },
+      "get": {
+        "tags": ["players"],
+        "summary": "Get All Players",
+        "description": "",
+        "operationId": "getAllPlayers",
+        "consumes": ["application/json"],
+        "produces": ["application/json"],
+        "parameters": [
+          {
+            "in": "query",
+            "name": "username",
+            "type": "string",
+            "description": "All Players List by username"
+          },
+          {
+            "in": "query",
+            "name": "email",
+            "type": "string",
+            "description": "All Players List by email"
+          },
+          {
+            "in": "query",
+            "name": "experience",
+            "type": "integer",
+            "description": "All Players List by experience"
+          },
+          {
+            "in": "query",
+            "name": "lvl",
+            "type": "integer",
+            "description": "All Players List by lvl"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "SUCCESS"
+          },
+          "500": {
+            "description": "Some error occurred while retrieving players."
+          }
+        }
+      }
+    },
+    "/players/{playerId}": {
+      "get": {
+        "tags": ["players"],
+        "summary": "Find player by ID",
+        "description": "Returns a single player",
+        "operationId": "getPlayerById",
+        "produces": ["application/json"],
+        "parameters": [
+          {
+            "name": "playerId",
+            "in": "path",
+            "description": "ID of player to return",
+            "required": true,
+            "type": "integer",
+            "format": "int64"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "SUCCESS"
+          },
+          "500": {
+            "description": "Error retrieving Player with id"
+          }
+        }
+      },
+      "put": {
+        "tags": ["players"],
+        "summary": "Updated player",
+        "description": "",
+        "operationId": "updatePlayer",
+        "consumes": ["application/json"],
+        "produces": ["application/json"],
+        "parameters": [
+          {
+            "name": "playerId",
+            "in": "path",
+            "description": "playerId that need to be updated",
+            "required": true,
+            "type": "integer",
+            "format": "int64"
+          },
+          {
+            "in": "body",
+            "name": "body",
+            "description": "Updated player object",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/Player"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Player was updated successfully."
+          },
+          "400": {
+            "description": "Cannot update Player with id. Maybe Player was not found or req.body is empty!"
+          },
+          "500": {
+            "description": "Error updating Player with id"
+          }
+        }
+      },
+      "delete": {
+        "tags": ["players"],
+        "summary": "Delete player",
+        "description": "",
+        "operationId": "deletePlayer",
+        "produces": ["application/json"],
+        "parameters": [
+          {
+            "name": "playerId",
+            "in": "path",
+            "description": "The playerId that needs to be deleted",
+            "required": true,
+            "type": "integer",
+            "format": "int64"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Player was deleted successfully!"
+          },
+          "400": {
+            "description": "Cannot delete Player with id. Maybe Player was not found!"
+          },
+          "500": {
+            "description": "Could not delete Player with id"
+          }
+        }
+      }
+    },
+    "/players/exp/{playerId}": {
+      "put": {
+        "tags": ["players"],
+        "summary": "Updated player experience",
+        "description": "",
+        "operationId": "updatePlayerExperience",
+        "consumes": ["application/json"],
+        "produces": ["application/json"],
+        "parameters": [
+          {
+            "name": "playerId",
+            "in": "path",
+            "description": "playerId that need to be updated",
+            "required": true,
+            "type": "integer",
+            "format": "int64"
+          },
+          {
+            "in": "body",
+            "name": "experience",
+            "description": "Updated player experience",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/PlayerExperience"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Player with id has more experience."
+          },
+          "400": {
+            "description": "Cannot update Player with id or exp field cannot be empty"
+          },
+          "500": {
+            "description": "Error updating Player exp with id"
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "Player": {
+      "type": "object",
+      "properties": {
+        "username": {
+          "type": "string"
+        },
+        "email": {
+          "type": "string"
+        },
+        "password": {
+          "type": "string"
+        },
+        "experience": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "lvl": {
+          "type": "integer",
+          "format": "int64"
+        }
+      }
+    },
+    "PlayerExperience": {
+      "type": "object",
+      "properties": {
+        "experience": {
+          "type": "integer",
+          "format": "int64"
+        }
+      },
+      "xml": {
+        "name": "Player"
+      }
+    }
+  }
+}
