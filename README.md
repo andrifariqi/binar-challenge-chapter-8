@@ -6,4 +6,6 @@ Binar Challenge Chapter 8
 - Monolith Dashboard Project.
 - Fullstack Project.
 
-- Andri Al Fariqi -
+* Andri Al Fariqi *
+
+
