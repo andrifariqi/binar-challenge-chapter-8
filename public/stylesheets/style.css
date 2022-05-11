@@ -1,0 +1,332 @@
+* {
+  font-family: "Roboto Condensed", sans-serif;
+}
+
+/* START CSS REGISTER, LOGIN*/
+div.container-fluid#login {
+  background-color: whitesmoke;
+  min-height: 100%;
+  height: 100vh;
+  padding-top: 20vh;
+}
+
+div.container#login {
+  background-color: rgba(128, 0, 128, 0.76);
+  border-style: solid;
+  border-color: black;
+  border-width: 3px;
+  border-radius: 10px;
+  width: 40%;
+}
+
+div.row#login {
+  margin-top: 5vh;
+  margin-bottom: 5vh;
+  margin-left: 2vw;
+  margin-right: 2vw;
+}
+
+label.form-label#login {
+  font-weight: bold;
+  margin-bottom: 2vh;
+  color: whitesmoke;
+}
+
+input.form-control#login {
+  margin-bottom: 2vh;
+}
+
+div.container-fluid#register {
+  background-color: whitesmoke;
+  min-height: 100%;
+  height: 100vh;
+  padding-top: 20vh;
+}
+
+div.container#register {
+  background-color: rgba(128, 0, 128, 0.76);
+  border-style: solid;
+  border-color: black;
+  border-width: 3px;
+  border-radius: 10px;
+  width: 50%;
+}
+
+div.row#register {
+  margin-top: 1vh;
+  margin-bottom: 1.5vh;
+  margin-left: 0.2vw;
+  margin-right: 0.2vw;
+}
+
+label.form-label#register {
+  font-weight: bold;
+  margin-bottom: 1vh;
+  color: whitesmoke;
+}
+
+label.form-check-label#register {
+  font-weight: bold;
+  margin-bottom: 1vh;
+  color: whitesmoke;
+}
+
+input.form-control#register {
+  margin-bottom: 1vh;
+}
+
+button.btn.btn-light {
+  font-weight: bold;
+  margin-top: 2vh;
+  width: 50%;
+  color: black;
+  background-color: rgba(245, 245, 245, 0.521);
+  text-transform: uppercase;
+  margin-left: 25%;
+}
+
+button.btn.btn-light:hover {
+  background-color: blueviolet;
+  color: white;
+}
+
+span {
+  font-weight: bold;
+  color: whitesmoke;
+}
+
+a.register {
+  text-decoration: none;
+  font-weight: bold;
+  color: skyblue;
+}
+
+a.register:hover {
+  color: black;
+}
+
+div.register {
+  text-align: center;
+  width: 40%;
+  margin-top: 2vh;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+a.login {
+  text-decoration: none;
+  font-weight: bold;
+  color: skyblue;
+}
+
+a.login:hover {
+  color: black;
+}
+
+div.login {
+  text-align: center;
+  width: 40%;
+  margin-top: 2vh;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+div.feedback {
+  color: rgb(163, 10, 10);
+  font-weight: bold;
+  background-color: rgba(250, 235, 215, 0.644);
+  text-align: center;
+  font-size: medium;
+}
+/* END CSS REGISTER, LOGIN*/
+
+/* START CSS 404*/
+#container-fluid-404 {
+  background: url(/images/404.jpg);
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+}
+/* END CSS 404*/
+
+/* START CSS MAIN */
+span.fs-4 {
+  font-weight: bold;
+  color: black;
+}
+
+div.d-flex.flex-column.flex-shrink-0.p-3.bg-light {
+  width: 280px;
+  min-height: 100%;
+  height: 100vh;
+}
+
+a.nav-link.link-dark {
+  font-weight: bold;
+}
+
+a.nav-link.link-dark:hover {
+  background-color: lightblue;
+  color: whitesmoke;
+  font-weight: bold;
+}
+
+a.dropdown-item {
+  font-weight: bold;
+}
+
+a.dropdown-item:hover {
+  background-color: lightblue;
+  font-weight: bold;
+}
+
+i.fa-solid {
+  margin-right: 1vw;
+}
+
+div.container-fluid#dashboard {
+  background-color: whitesmoke;
+  min-height: 100%;
+  height: 100vh;
+  padding-top: 10vh;
+  width: 80vw;
+  min-width: 100%;
+}
+
+div.container-fluid#create-user {
+  background-color: whitesmoke;
+  min-height: 100%;
+  height: 100vh;
+  padding-top: 20vh;
+  width: 80vw;
+  min-width: 100%;
+}
+
+div.container#dashboard {
+  background-color: rgba(128, 0, 128, 0.76);
+  border-style: solid;
+  border-color: black;
+  border-width: 3px;
+  border-radius: 10px;
+  width: 60%;
+}
+
+div.container#body-dashboard {
+  background-color: aliceblue;
+  border-style: solid;
+  border-color: black;
+  border-width: 3px;
+  border-radius: 10px;
+  width: 60%;
+}
+
+div.row#dashboard {
+  margin-top: 2vh;
+  margin-bottom: 2vh;
+  margin-left: 1vw;
+  margin-right: 1vw;
+}
+
+label.form-label#dashboard {
+  font-weight: bold;
+  margin-bottom: 1vh;
+  color: whitesmoke;
+}
+
+input.form-control#dashboard {
+  margin-bottom: 1vh;
+  font-weight: bold;
+}
+
+div.container#admin {
+  background-color: whitesmoke;
+  min-height: 100%;
+  height: 100vh;
+  padding-top: 15vh;
+  width: 80vw;
+  min-width: 100%;
+}
+
+td#button-options {
+  text-align: center;
+  width: 23%;
+}
+
+button.btn.btn-light {
+  font-weight: bold;
+  margin-top: 2vh;
+  width: 50%;
+  color: black;
+  background-color: rgba(245, 245, 245, 0.521);
+  text-transform: uppercase;
+  margin-left: 25%;
+  margin-bottom: 2vh;
+}
+
+button.btn.btn-light:hover {
+  background-color: blueviolet;
+  color: white;
+}
+
+button.btn.btn-secondary {
+  margin-bottom: 2vh;
+}
+
+button.btn.btn-outline-primary {
+  margin-bottom: 2vh;
+  margin-left: 2%;
+}
+
+button.btn.btn-secondary:hover {
+  background-color: whitesmoke;
+  color: black;
+}
+
+div.container#form-search {
+  width: 95%;
+}
+
+form#form-search {
+  width: 30%;
+}
+
+div.feedback#dashboard {
+  color: rgb(163, 10, 10);
+  font-weight: bold;
+  background-color: rgba(250, 235, 215, 0.644);
+  text-align: center;
+  font-size: medium;
+}
+
+label.form-check-label {
+  font-weight: bold;
+  margin-bottom: 1vh;
+  color: whitesmoke;
+}
+
+form.btn {
+  margin-left: -0.8vw;
+}
+
+div.table-responsive {
+  max-height: 70%;
+}
+
+.ct-series-a .ct-bar {
+  stroke: blueviolet !important;
+  stroke-width: 2vw;
+}
+
+.ct-label {
+  font-size: 15px !important;
+  font-weight: bold !important;
+}
+
+h3#dashboard {
+  text-align: center;
+  margin-top: 1vh;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+/* END CSS MAIN */

@@ -1,0 +1,41 @@
+<div class="container" id="admin">
+  <div class="container" id="form-search">
+    <form action="/item/get" method="post" id="form-search">
+      <div class="input-group mb-3">
+        <input
+          type="text"
+          class="form-control"
+          name="search"
+          placeholder="Search Item"
+        />
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </div>
+    </form>
+  </div>
+  <div class="table-responsive" style="height: 40vh">
+    <table class="table table-bordered table-primary table-hover">
+      <thead>
+        <tr>
+          <th scope="col">SKU</th>
+          <th scope="col">Item Name</th>
+          <th scope="col">Item Description</th>
+          <th scope="col">Price</th>
+          <th scope="col">Brand</th>
+          <th scope="col">Stock</th>
+        </tr>
+      </thead>
+      <% item.forEach(i => { %>
+      <tbody>
+        <tr>
+          <th scope="row"><%- i.sku %></th>
+          <td><%- i.itemname %></td>
+          <td><%- i.itemdescription %></td>
+          <td><%- i.price %></td>
+          <td><%- i.brand %></td>
+          <td><%- i.stock %></td>
+        </tr>
+      </tbody>
+      <% }) %>
+    </table>
+  </div>
+</div>

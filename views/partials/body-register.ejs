@@ -1,0 +1,83 @@
+<div class="container-fluid" id="register">
+  <div class="container" id="register">
+    <div class="row justify-content-md-center" id="register">
+      <form action="/register" method="post">
+        <div class="row" id="register">
+          <div class="col">
+            <label for="validationusername" class="form-label" id="register"
+              >Username</label
+            >
+            <input
+              type="text"
+              class="form-control"
+              id="register"
+              name="username"
+              placeholder="Username"
+              required
+            />
+          </div>
+          <div class="col">
+            <label for="validationemail" class="form-label" id="register"
+              >Email</label
+            >
+            <input
+              type="text"
+              class="form-control"
+              id="register"
+              name="email"
+              placeholder="Email"
+              required
+            />
+          </div>
+        </div>
+        <div class="row" id="register">
+          <div class="col">
+            <label for="validationphone" class="form-label" id="register"
+              >Phone</label
+            >
+            <input
+              type="text"
+              class="form-control"
+              id="register"
+              name="phone"
+              placeholder="Phone"
+              required
+            />
+          </div>
+          <div class="col">
+            <label for="validationrole" class="form-label" id="register"
+              >Role</label
+            >
+            <select class="form-select" id="validationrole" name="isadmin">
+              <option value="true">Admin</option>
+              <option value="false" selected>Staff</option>
+            </select>
+          </div>
+        </div>
+        <div class="row" id="register">
+          <div class="col">
+            <label for="validationpassword" class="form-label" id="register"
+              >Password</label
+            >
+            <input
+              type="password"
+              class="form-control"
+              id="register"
+              name="password"
+              placeholder="Password"
+              required
+            />
+          </div>
+          <div class="col"></div>
+        </div>
+        <div class="col">
+          <button class="btn btn-light" type="submit">Register</button>
+        </div>
+        <div class="login">
+          <span>Have A Member ?</span>
+          <a class="login" href="/login">Login</a>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,48 @@
+<div class="container-fluid" id="login">
+  <div class="container" id="login">
+    <div class="row justify-content-md-center" id="login">
+      <form action="/login" method="post">
+        <div class="col">
+          <label for="validationusername" class="form-label" id="login"
+            >Username</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            id="login"
+            name="username"
+            placeholder="Please choose a username"
+            required
+          />
+        </div>
+        <div class="col">
+          <label for="validationpassword" class="form-label" id="login"
+            >Password</label
+          >
+          <input
+            type="password"
+            class="form-control"
+            id="login"
+            name="password"
+            placeholder="Please choose a password"
+            required
+          />
+          <% if (message) { %>
+          <div class="feedback"><%= message %></div>
+          <% } %>
+        </div>
+        <div class="col">
+          <button class="btn btn-light" type="submit">Login</button>
+        </div>
+        <div class="register">
+          <span>Not A Member ?</span>
+          <a class="register" href="/register">Register</a>
+        </div>
+        <div class="register">
+          <span>Forgot Password ?</span>
+          <a class="register" href="/forgotpassword">Click Here</a>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

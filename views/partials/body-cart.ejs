@@ -1,0 +1,35 @@
+<div class="container" id="admin">
+  <a href="#"><button class="btn btn-secondary">Generate Invoice</button></a>
+  <div class="table-responsive" style="height: 40vh">
+    <table class="table table-bordered table-primary table-hover">
+      <thead>
+        <tr>
+          <th scope="col">SKU</th>
+          <th scope="col">Item Name</th>
+          <th scope="col">Brand</th>
+          <th scope="col">Price</th>
+          <th scope="col">Quantity</th>
+          <th scope="col">Total Price</th>
+          <th scope="col">Action</th>
+        </tr>
+      </thead>
+      <% cart.forEach(i => { %>
+      <tbody>
+        <tr>
+          <th scope="row"><%- i.Item.sku %></th>
+          <td><%- i.Item.itemname %></td>
+          <td><%- i.Item.brand %></td>
+          <td><%- i.Item.price %></td>
+          <td><%- i.quantity %></td>
+          <td><%- i.Item.price * i.quantity %></td>
+          <td id="button-options" style="width: 5%">
+            <form class="btn" action="/cart/delete/<%- i.id %>" method="post">
+              <button class="btn btn-danger" type="submit">Delete</button>
+            </form>
+          </td>
+        </tr>
+      </tbody>
+      <% }) %>
+    </table>
+  </div>
+</div>

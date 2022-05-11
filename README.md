@@ -1,1 +1,3 @@
-# binar-challenge-chapter-8
+# Binar Academy Bootcamp - FSW - Chapter 8 - Challenge
+
+Monolith Dashboard - Andri Al Fariqi -

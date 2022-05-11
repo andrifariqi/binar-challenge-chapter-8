@@ -1,0 +1,48 @@
+<div class="container" id="admin">
+  <% if (isAdmin === true) { %>
+  <a href="/item/add"><button class="btn btn-secondary">Add Item</button></a><%
+  } %> <% if (isAdmin === true) { %>
+  <a href="/item/get"
+    ><button class="btn btn-outline-primary">Search Item</button></a
+  ><% } %>
+  <div class="table-responsive" style="height: 40vh">
+    <table class="table table-bordered table-primary table-hover">
+      <thead>
+        <tr>
+          <th scope="col">SKU</th>
+          <th scope="col">Item Name</th>
+          <th scope="col">Item Description</th>
+          <th scope="col">Price</th>
+          <th scope="col">Brand</th>
+          <th scope="col">Stock</th>
+          <th scope="col">Action</th>
+        </tr>
+      </thead>
+      <% item.forEach(i => { %>
+      <tbody>
+        <tr>
+          <th scope="row"><%- i.sku %></th>
+          <td><%- i.itemname %></td>
+          <td><%- i.itemdescription %></td>
+          <td><%- i.price %></td>
+          <td><%- i.brand %></td>
+          <td><%- i.stock %></td>
+          <td id="button-options">
+            <form class="btn" action="/cart/add/<%- i.id %>" method="post">
+              <button class="btn btn-primary">Add to Cart</button>
+            </form>
+            <% if (isAdmin === true) { %>
+            <a href="/item/update/<%- i.id %>"
+              ><button class="btn btn-success">Update</button></a
+            >
+            <form class="btn" action="/item/delete/<%- i.id %>" method="post">
+              <button class="btn btn-danger" type="submit">Delete</button>
+            </form>
+            <% } %>
+          </td>
+        </tr>
+      </tbody>
+      <% }) %>
+    </table>
+  </div>
+</div>
