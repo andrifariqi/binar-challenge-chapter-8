@@ -1,10 +1,10 @@
 <div class="container" id="admin">
   <% if (isAdmin === true) { %>
   <a href="/item/add"><button class="btn btn-secondary">Add Item</button></a><%
-  } %> <% if (isAdmin === true) { %>
+  } %>
   <a href="/item/get"
     ><button class="btn btn-outline-primary">Search Item</button></a
-  ><% } %>
+  >
   <div class="table-responsive" style="height: 60vh">
     <table class="table table-bordered table-primary table-hover">
       <thead>
@@ -24,7 +24,7 @@
           <th scope="row"><%- i.sku %></th>
           <td><%- i.itemname %></td>
           <td><%- i.itemdescription %></td>
-          <td><%- i.price %></td>
+          <td>Rp <%- i.price %></td>
           <td><%- i.brand %></td>
           <td><%- i.stock %></td>
           <td id="button-options">

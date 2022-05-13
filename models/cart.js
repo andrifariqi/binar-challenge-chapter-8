@@ -96,6 +96,19 @@ module.exports = (sequelize, DataTypes) => {
       }
     }
 
+    static async GetTotalPrice(session) {
+      try {
+        const totalPrice =
+          await sequelize.query(`SELECT SUM("Item"."price" * "Cart"."quantity") AS "t_price"
+      FROM "Carts" AS "Cart" 
+      INNER JOIN "Items" AS "Item" ON "Cart"."ItemId" = "Item"."id"
+      WHERE "Cart"."UserId" = ${session.userid}`);
+        return totalPrice[0];
+      } catch (error) {
+        return Promise.reject({ message: error });
+      }
+    }
+
     static async DeleteCart(param, session) {
       try {
         const { Item } = require("../models");

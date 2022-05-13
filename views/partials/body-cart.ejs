@@ -19,9 +19,9 @@
           <th scope="row"><%- i.Item.sku %></th>
           <td><%- i.Item.itemname %></td>
           <td><%- i.Item.brand %></td>
-          <td><%- i.Item.price %></td>
+          <td>Rp <%- i.Item.price %></td>
           <td><%- i.quantity %></td>
-          <td><%- i.Item.price * i.quantity %></td>
+          <td>Rp <%- i.Item.price * i.quantity %></td>
           <td id="button-options" style="width: 5%">
             <form class="btn" action="/cart/delete/<%- i.id %>" method="post">
               <button class="btn btn-danger" type="submit">Delete</button>
@@ -32,4 +32,9 @@
       <% }) %>
     </table>
   </div>
+  <% price.forEach(i => { %>
+  <h3 class="text-end" id="h3-price">
+    Total Price in Cart : <strong>Rp <%- i.t_price %></strong>
+  </h3>
+  <% }) %>
 </div>

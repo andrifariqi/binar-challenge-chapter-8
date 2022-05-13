@@ -43,8 +43,22 @@ module.exports = (sequelize, DataTypes) => {
     static async ShowAllItem() {
       try {
         const item = await this.findAll({
-          order: [["id", "ASC"]],
+          order: [["sku", "ASC"]],
           where: { [Op.and]: [{ deletedAt: null }, { deletedBy: null }] },
+          limit: 10,
+        });
+        return item;
+      } catch (error) {
+        return Promise.reject({ message: error });
+      }
+    }
+
+    static async ShowAllItemForHome() {
+      try {
+        const item = await this.findAll({
+          order: [["stock", "DESC"]],
+          where: { [Op.and]: [{ deletedAt: null }, { deletedBy: null }] },
+          limit: 6,
         });
         return item;
       } catch (error) {

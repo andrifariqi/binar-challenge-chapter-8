@@ -344,4 +344,10 @@ h3#dashboard {
   text-transform: uppercase;
   letter-spacing: 3px;
 }
+
+h3#h3-price {
+  margin-top: 1vh;
+  letter-spacing: 2px;
+  font-size: 25px;
+}
 /* END CSS MAIN */

@@ -16,11 +16,13 @@ class CartController {
     try {
       const session = req.session.user;
       const cart = await Cart.GetCart(session);
+      const price = await Cart.GetTotalPrice(session);
       res.status(200).render("cart", {
         title: "Cart",
         username: session.username,
         isAdmin: session.isadmin,
         cart,
+        price,
       });
     } catch (error) {
       res.status(500).send(error);

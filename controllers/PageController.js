@@ -12,7 +12,7 @@ class PageController {
   static async GetHome(req, res) {
     try {
       const { Item } = require("../models");
-      const item = await Item.ShowAllItem();
+      const item = await Item.ShowAllItemForHome();
       const session = req.session.user;
       res.status(200).render("index", {
         title: "Home",
