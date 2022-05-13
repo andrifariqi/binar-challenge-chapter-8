@@ -56,11 +56,7 @@ module.exports = (sequelize, DataTypes) => {
       try {
         const item = await this.findAll({
           where: {
-            [Op.or]: [
-              { itemname: data.search },
-              { brand: data.search },
-              { sku: parseInt(data.search) },
-            ],
+            [Op.or]: [{ itemname: data.search }, { brand: data.search }],
           },
         });
         return item;

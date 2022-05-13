@@ -11,11 +11,14 @@ class PageController {
 
   static async GetHome(req, res) {
     try {
+      const { Item } = require("../models");
+      const item = await Item.ShowAllItem();
       const session = req.session.user;
       res.status(200).render("index", {
         title: "Home",
         username: session.username,
         isAdmin: session.isadmin,
+        item,
       });
     } catch (error) {
       res.status(500).send(error);
