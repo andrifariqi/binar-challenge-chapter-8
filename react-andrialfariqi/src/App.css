@@ -59,7 +59,13 @@
   margin-left: 25%;
 }
 
+#nv {
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
 .nv-player {
   text-decoration: none;
   color: black;
+  margin-right: 2%;
 }

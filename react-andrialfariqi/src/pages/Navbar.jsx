@@ -6,7 +6,7 @@ import "../App.css";
 class NvBar extends Component {
   render() {
     return (
-      <Navbar collapseOnSelect expand="lg" bg="light" variant="light">
+      <Navbar id="nv" collapseOnSelect expand="lg" bg="light" variant="light">
         <Container>
           <Navbar.Brand>
             <Link className="nv-player" to="/">
@@ -17,21 +17,17 @@ class NvBar extends Component {
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="me-auto">
               <NavDropdown title="Player" id="collasible-nav-dropdown">
-                <NavDropdown.Item>
-                  <Link className="nv-player" to="/create-player">
-                    Create Player
-                  </Link>
-                </NavDropdown.Item>
-                <NavDropdown.Item>
-                  <Link className="nv-player" to="/edit-player">
-                    Edit Player
-                  </Link>
-                </NavDropdown.Item>
-                <NavDropdown.Item>
-                  <Link className="nv-player" to="/search-player">
-                    Search Player
-                  </Link>
-                </NavDropdown.Item>
+                <Link className="nv-player" to="/create-player">
+                  Create Player
+                </Link>
+                <br />
+                <Link className="nv-player" to="/edit-player">
+                  Edit Player
+                </Link>
+                <br />
+                <Link className="nv-player" to="/search-player">
+                  Search Player
+                </Link>
               </NavDropdown>
             </Nav>
           </Navbar.Collapse>

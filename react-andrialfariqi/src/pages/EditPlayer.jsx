@@ -10,6 +10,29 @@ import {
 import "../App.css";
 
 class EditPlayer extends Component {
+  state = {
+    username: "Andri",
+    email: "andrialfariqiid@gmail.com",
+    roles: "1",
+    password: "Andri",
+    address: "Indonesia",
+    state: "Tangerang Selatan",
+    zip: "15310",
+  };
+
+  handlerInputChange = (e) => {
+    // const updateInput = e.target.value;
+    this.setState({
+      username: e.target.value,
+      email: e.target.value,
+      roles: e.target.value,
+      password: e.target.value,
+      address: e.target.value,
+      state: e.target.value,
+      zip: e.target.value,
+    });
+  };
+
   render() {
     return (
       <Container className="ec-player">
@@ -23,7 +46,8 @@ class EditPlayer extends Component {
                     <Form.Control
                       type="text"
                       placeholder="Username"
-                      value={"Andri"}
+                      value={this.state.username}
+                      onChange={(e) => this.handlerInputChange(e)}
                       required
                     />
                   </FloatingLabel>
@@ -34,19 +58,21 @@ class EditPlayer extends Component {
                     <Form.Control
                       type="email"
                       placeholder="Email"
-                      value={"andrialfariqiid@gmail.com"}
+                      value={this.state.email}
+                      onChange={(e) => this.handlerInputChange(e)}
                       required
                     />
                   </FloatingLabel>
                 </Form.Group>
               </Row>
-
+              ;
               <Row className="mb-3">
                 <Form.Group as={Col} controlId="formGridState">
                   <FloatingLabel controlId="floatingSelect" label="Roles">
                     <Form.Select
                       aria-label="Floating label select example"
-                      value={"1"}
+                      value={this.state.roles}
+                      onChange={(e) => this.handlerInputChange(e)}
                       required
                     >
                       <option>Open this select menu</option>
@@ -60,32 +86,33 @@ class EditPlayer extends Component {
                     <Form.Control
                       type="password"
                       placeholder="Password"
-                      value={"Andri"}
+                      value={this.state.password}
+                      onChange={(e) => this.handlerInputChange(e)}
                       required
                     />
                   </FloatingLabel>
                 </Form.Group>
               </Row>
-
               <Form.Group className="mb-3" controlId="formGridAddress1">
                 <FloatingLabel controlId="floatingTextarea" label="Address">
                   <Form.Control
                     as="textarea"
                     placeholder="Address"
                     style={{ height: "100px" }}
-                    value={"Indonesia"}
+                    value={this.state.address}
+                    onChange={(e) => this.handlerInputChange(e)}
                     required
                   />
                 </FloatingLabel>
               </Form.Group>
-
               <Row className="mb-3">
                 <Form.Group as={Col} controlId="formGridCity">
                   <FloatingLabel controlId="floatingState" label="State">
                     <Form.Control
                       type="state"
                       placeholder="State"
-                      value={"Tangerang Selatan"}
+                      value={this.state.state}
+                      onChange={(e) => this.handlerInputChange(e)}
                       required
                     />
                   </FloatingLabel>
@@ -96,13 +123,13 @@ class EditPlayer extends Component {
                     <Form.Control
                       type="zip"
                       placeholder="Zip"
-                      value={"15310"}
+                      value={this.state.zip}
+                      onChange={(e) => this.handlerInputChange(e)}
                       required
                     />
                   </FloatingLabel>
                 </Form.Group>
               </Row>
-
               <Button
                 variant="outline-secondary"
                 type="submit"

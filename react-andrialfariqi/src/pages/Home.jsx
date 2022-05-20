@@ -35,9 +35,8 @@ class Home extends Component {
             <Carousel variant="dark">
               {this.state.home.map((el) => {
                 return (
-                  <Carousel.Item>
+                  <Carousel.Item key={el.id}>
                     <img
-                      key={el.id}
                       className="d-block w-100"
                       src={el.img}
                       alt="First slide"
