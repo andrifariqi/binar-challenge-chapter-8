@@ -1,0 +1,17 @@
+.ConAbout {
+  margin-top: 5%;
+}
+
+.ParAbout {
+  margin-top: 3%;
+  color: whitesmoke;
+  font-weight: bold;
+  letter-spacing: 1.5px;
+}
+
+.RowAbout {
+  margin-bottom: 3%;
+  margin-top: 3%;
+  margin-left: 20%;
+  margin-right: 20%;
+}

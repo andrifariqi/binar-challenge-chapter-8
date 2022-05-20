@@ -1,0 +1,19 @@
+.Nav {
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 1.5px;
+  color: darkgrey;
+}
+
+.Nav-link {
+  text-decoration: none;
+  color: darkgrey;
+  margin-right: 5%;
+}
+
+.Nav-link:hover {
+  text-decoration: underline;
+  text-decoration-color: purple;
+  text-decoration-thickness: 30%;
+  color: whitesmoke;
+}

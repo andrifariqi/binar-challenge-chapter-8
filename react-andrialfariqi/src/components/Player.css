@@ -1,0 +1,21 @@
+.ConPlayer {
+  margin-top: 3%;
+}
+
+.BtnCrtPlayer {
+  margin-left: -80%;
+  margin-bottom: 1.5%;
+  width: 20%;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.ButtonPlayer {
+  margin-right: 3%;
+  margin-left: 3%;
+  width: 35%;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
