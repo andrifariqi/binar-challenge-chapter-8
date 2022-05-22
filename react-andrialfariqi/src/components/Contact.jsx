@@ -5,7 +5,10 @@ import "./Contact.css";
 class Contact extends Component {
   render() {
     return (
-      <Form className="FormContact" action="/contact" method="post">
+      <Form
+        className="FormContact"
+        // action="/contact" method="post"
+      >
         <Row className="RowContact">
           <Col>
             <FloatingLabel label="First Name">
@@ -58,7 +61,11 @@ class Contact extends Component {
             </FloatingLabel>
           </Col>
         </Row>
-        <Button className="ButtonContact" type="submit" variant="outline-light">
+        <Button
+          className="ButtonContact"
+          // type="submit"
+          variant="outline-light"
+        >
           Submit
         </Button>
       </Form>

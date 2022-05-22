@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import { Form, Row, Col, FloatingLabel, Button } from "react-bootstrap";
-import "./PlayerCreate.css";
+import "./PlayerUpdate.css";
 
-class PlayerCreate extends Component {
+class PlayerUpdate extends Component {
   render() {
     return (
       <Form className="FormContact" action="/create-player" method="post">
@@ -63,4 +63,4 @@ class PlayerCreate extends Component {
   }
 }
 
-export default PlayerCreate;
+export default PlayerUpdate;
