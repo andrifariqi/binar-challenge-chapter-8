@@ -12,6 +12,7 @@ class Nvbar extends Component {
         expand="lg"
         bg="dark"
         variant="dark"
+        sticky="top"
       >
         <Container>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />

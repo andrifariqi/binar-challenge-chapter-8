@@ -1,17 +1,16 @@
-.FormContact {
-    margin-top: 5%;
-    margin-left: 20%;
-    margin-right: 20%;
-  }
-  
-  .RowContact {
-    margin-top: 2%;
-  }
-  
-  .ButtonContact {
-    margin-top: 2%;
-    width: 30%;
-    text-transform: uppercase;
-    font-weight: bold;
-  }
-  
+.FormCreate {
+  margin-top: 5%;
+  margin-left: 20%;
+  margin-right: 20%;
+}
+
+.RowCreate {
+  margin-top: 2%;
+}
+
+.ButtonCreate {
+  margin-top: 2%;
+  width: 30%;
+  text-transform: uppercase;
+  font-weight: bold;
+}

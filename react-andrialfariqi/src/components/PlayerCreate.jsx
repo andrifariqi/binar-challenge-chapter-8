@@ -3,18 +3,20 @@ import { Form, Row, Col, FloatingLabel, Button } from "react-bootstrap";
 import "./PlayerCreate.css";
 
 class PlayerCreate extends Component {
-  createPlayer = [
-    {
-      username: "",
-      email: "",
-      phone: "",
-      roles: "Admin",
-      address: "",
-      password: "",
-      experience: "",
-      level: "",
-    },
-  ];
+  state = {
+    createPlayer: [
+      {
+        username: "",
+        email: "",
+        phone: "",
+        roles: "",
+        address: "",
+        password: "",
+        experience: "",
+        level: "",
+      },
+    ],
+  };
 
   handleUsernameChange = (event) => {
     this.setState({ username: event.target.value });
@@ -66,14 +68,14 @@ class PlayerCreate extends Component {
       level,
       address,
       password,
-    } = this.createPlayer;
+    } = this.state.createPlayer;
     return (
       <Form
-        className="FormContact"
+        className="FormCreate"
         action="/player"
         onSubmit={this.handleSubmit}
       >
-        <Row className="RowContact">
+        <Row className="RowCreate">
           <Col>
             <FloatingLabel label="Username">
               <Form.Control
@@ -97,7 +99,7 @@ class PlayerCreate extends Component {
             </FloatingLabel>
           </Col>
         </Row>
-        <Row className="RowContact">
+        <Row className="RowCreate">
           <Col>
             <FloatingLabel label="Phone">
               <Form.Control
@@ -116,13 +118,14 @@ class PlayerCreate extends Component {
                 value={roles}
                 onChange={this.handleRolesChange}
               >
+                <option>Open this select menu</option>
                 <option value="Admin">Admin</option>
                 <option value="Staff">Staff</option>
               </Form.Select>
             </FloatingLabel>
           </Col>
         </Row>
-        <Row className="RowContact">
+        <Row className="RowCreate">
           <Col>
             <FloatingLabel label="Experience">
               <Form.Control
@@ -146,7 +149,7 @@ class PlayerCreate extends Component {
             </FloatingLabel>
           </Col>
         </Row>
-        <Row className="RowContact">
+        <Row className="RowCreate">
           <Col>
             <FloatingLabel label="Address">
               <Form.Control
@@ -160,7 +163,7 @@ class PlayerCreate extends Component {
             </FloatingLabel>
           </Col>
         </Row>
-        <Row className="RowContact">
+        <Row className="RowCreate">
           <Col>
             <FloatingLabel label="Password">
               <Form.Control
@@ -174,8 +177,8 @@ class PlayerCreate extends Component {
             </FloatingLabel>
           </Col>
         </Row>
-        <Button className="ButtonContact" type="submit" variant="outline-light">
-          Submit
+        <Button className="ButtonCreate" type="submit" variant="outline-light">
+          Create
         </Button>
       </Form>
     );

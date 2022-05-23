@@ -56,7 +56,7 @@ class PlayerUpdate extends Component {
           </Col>
         </Row>
         <Button className="ButtonContact" type="submit" variant="outline-light">
-          Submit
+          Update
         </Button>
       </Form>
     );

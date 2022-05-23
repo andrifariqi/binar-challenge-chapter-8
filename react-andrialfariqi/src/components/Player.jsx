@@ -1,9 +1,9 @@
 import React, { Component } from "react";
 import {
-  InputGroup,
-  SplitButton,
-  Dropdown,
-  FormControl,
+  // InputGroup,
+  // SplitButton,
+  // Dropdown,
+  // FormControl,
   Container,
   Table,
   Button,
@@ -24,7 +24,16 @@ class Player extends Component {
             Create Player
           </Button>
         </Link> */}
-        <InputGroup className="mb-3">
+        <Link to="/search-player">
+          <Button
+            className="BtnCrtPlayer"
+            type="submit"
+            variant="outline-light"
+          >
+            Search Player
+          </Button>
+        </Link>
+        {/* <InputGroup className="mb-3">
           <FormControl
             aria-label="Text input with dropdown button"
             placeholder="Input Search Username / Email / Experience / Level"
@@ -34,13 +43,14 @@ class Player extends Component {
             title="Submit"
             id="segmented-button-dropdown-2"
             alignRight
+            type="submit"
           >
             <Dropdown.Item href="#">Username</Dropdown.Item>
             <Dropdown.Item href="#">Email</Dropdown.Item>
             <Dropdown.Item href="#">Experience</Dropdown.Item>
             <Dropdown.Item href="#">Level</Dropdown.Item>
           </SplitButton>
-        </InputGroup>
+        </InputGroup> */}
 
         <Table responsive striped bordered hover variant="dark" size="sm">
           <thead>
@@ -57,39 +67,38 @@ class Player extends Component {
           </thead>
           <tbody>
             {this.props.playerList.map((el, i) => {
-              {
-                if (el !== null) {
-                  return (
-                    <tr key={i}>
-                      <td>{i + 1}</td>
-                      <td>{el.username}</td>
-                      <td>{el.email}</td>
-                      <td>{el.phone}</td>
-                      <td>{el.experience}</td>
-                      <td>{el.level}</td>
-                      <td>{el.roles}</td>
-                      <td>
-                        <Link to="/update-player">
-                          <Button
-                            className="ButtonPlayer"
-                            type="submit"
-                            variant="outline-success"
-                          >
-                            Update
-                          </Button>
-                        </Link>
+              if (el !== null) {
+                return (
+                  <tr key={i}>
+                    <td>{i + 1}</td>
+                    <td>{el.username}</td>
+                    <td>{el.email}</td>
+                    <td>{el.phone}</td>
+                    <td>{el.experience}</td>
+                    <td>{el.level}</td>
+                    <td>{el.roles}</td>
+                    <td>
+                      <Link to="#">
                         <Button
                           className="ButtonPlayer"
-                          // type="submit"
-                          variant="outline-danger"
+                          type="submit"
+                          variant="outline-success"
                         >
-                          Delete
+                          Update
                         </Button>
-                      </td>
-                    </tr>
-                  );
-                }
+                      </Link>
+                      {/* <Button
+                        className="ButtonPlayer"
+                        type="submit"
+                        variant="outline-danger"
+                      >
+                        Delete
+                      </Button> */}
+                    </td>
+                  </tr>
+                );
               }
+              return el;
             })}
           </tbody>
         </Table>
