@@ -33,6 +33,16 @@ class Player extends Component {
             Search Player
           </Button>
         </Link>
+        {/* <br />
+        <Link to="/update-player">
+          <Button
+            className="BtnCrtPlayer"
+            type="submit"
+            variant="outline-light"
+          >
+            Update Player
+          </Button>
+        </Link> */}
         {/* <InputGroup className="mb-3">
           <FormControl
             aria-label="Text input with dropdown button"
@@ -78,22 +88,23 @@ class Player extends Component {
                     <td>{el.level}</td>
                     <td>{el.roles}</td>
                     <td>
-                      <Link to="#">
+                      <Link to="/update-player">
                         <Button
                           className="ButtonPlayer"
                           type="submit"
                           variant="outline-success"
+                          onClick={() => this.props.onEditPlayer(el)}
                         >
                           Update
                         </Button>
                       </Link>
-                      {/* <Button
+                      {/*<Button
                         className="ButtonPlayer"
                         type="submit"
                         variant="outline-danger"
                       >
                         Delete
-                      </Button> */}
+                      </Button>*/}
                     </td>
                   </tr>
                 );

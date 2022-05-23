@@ -9,7 +9,7 @@ import About from "./components/About";
 import Player from "./components/Player";
 import PlayerCreate from "./components/PlayerCreate";
 import PlayerSearch from "./components/PlayerSearch";
-// import PlayerUpdate from "./components/PlayerUpdate";
+import PlayerUpdate from "./components/PlayerUpdate";
 
 class App extends Component {
   state = {
@@ -25,12 +25,19 @@ class App extends Component {
         level: "100",
       },
     ],
+    editPlayers: [],
   };
 
   addPlayer = (createPlayer) => {
     this.setState({
       playerList: [...this.state.playerList.concat(createPlayer)],
     });
+  };
+
+  getPlayerData = (editPlayer) => {
+    this.setState({ editPlayers: [editPlayer] });
+    // console.log(this.state.editPlayers[0]);
+    return editPlayer;
   };
 
   render() {
@@ -45,7 +52,10 @@ class App extends Component {
               element={
                 <>
                   <PlayerCreate onAddPlayer={this.addPlayer} />
-                  <Player playerList={this.state.playerList} />
+                  <Player
+                    playerList={this.state.playerList}
+                    onEditPlayer={this.getPlayerData}
+                  />
                 </>
               }
               path="/player"
@@ -55,17 +65,16 @@ class App extends Component {
               element={<PlayerSearch />}
               path="/search-player"
             ></Route>
+            <Route
+              exact
+              element={<PlayerUpdate playerList={this.state.editPlayers} />}
+              path="/update-player"
+            ></Route>
             {/* <Route
               exact
               element={<PlayerCreate />}
               path="/create-player"
-            ></Route>
-            <Route
-              exact
-              element={<PlayerUpdate />}
-              path="/update-player"
             ></Route> */}
-
             <Route exact element={<Contact />} path="/contact"></Route>
             <Route exact element={<About />} path="/about"></Route>
           </Routes>
